@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-blue-900 via-blue-600 to-white flex flex-col items-center justify-center gap-20"
+  >
+    <div class="text-[50px] font-serif bg-transparent font-semibold text-white">
+      <span class="text-green-400 skew-y-10">Currency </span>Converter
+    </div>
+    <div class="bg-white p-6 max-w-4xl w-full mx-auto rounded-lg shadow-md">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <div class="px-4 py-2 bg-transparent text-black rounded">Convert</div>
+          <button
+            class="px-4 py-2 text-gray-800 border border-black rounded hover:bg-green-600 hover:text-white"
+          >
+            <a href="https://www.x-rates.com/table/?from=INR&amount=1"
+              >Charts</a
+            >
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="flex items-center justify-between bg-sky-50 p-4 rounded-lg shadow"
+      >
+        <div class="flex flex-col">
+          <label for="amount" class="text-sm text-gray-600">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            placeholder="$1.00"
+            class="p-2 border border-gray-400 rounded-md mt-1"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="from" class="text-sm text-gray-600">From</label>
+          <input
+            type="text"
+            name="from"
+            id="from_country"
+            list="currencies"
+            class="p-2 border border-gray-400 rounded-md mt-1"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="to" class="text-sm text-gray-600">To</label>
+          <input
+            type="text"
+            name="to"
+            id="to_country"
+            list="currencies"
+            class="p-2 border border-gray-400 rounded-md mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-6">
+        <div class="text-gray-600">
+          <p>
+            <span class="choice1 text-md"></span>
+            <span class="font-semibold con_rate text-slate-400 text-md"></span>
+          </p>
+          <p class="content-2 text-sm"></p>
+        </div>
+        <div>
+          <button
+            class="px-4 py-2 bg-green-400 text-white font-semibold rounded hover:bg-green-600 action"
+          >
+            Convert
+          </button>
+        </div>
+      </div>
+      <datalist id="currencies"></datalist>
+    </div>
+  </body>
+</html>
